@@ -1,0 +1,7 @@
+CREATE TABLE comments (
+    id VARCHAR PRIMARY KEY NOT NULL,
+    title VARCHAR NOT NULL,
+    msg VARCHAR NOT NULL,
+    user_id VARCHAR REFERENCES users(id) NOT NULL,
+    post_id VARCHAR REFERENCES posts(id) NOT NULL 
+);
